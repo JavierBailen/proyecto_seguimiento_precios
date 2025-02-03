@@ -23,12 +23,14 @@ export async function scrapearInstantGaming(nombreProducto) {
           
           const precio = document.querySelector('.information .price')
           const texto = document.querySelector('.name');
+          const imagen = document.querySelector('.picture')
           
         
           return {
             texto: texto.innerText, 
             
-            precio: precio.innerText
+            precio: precio.innerText,
+            imagen: imagen.src
         
           };
         })

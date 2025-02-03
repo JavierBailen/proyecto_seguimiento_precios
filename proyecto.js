@@ -26,6 +26,7 @@ export async function scrapearGame(url) {
           
           const plataforma = document.querySelector('.dd a span');
           const precio = document.querySelector('.int');
+          const imagen = document.querySelector('.u-100.u-relative img')
           
 
          
@@ -34,6 +35,8 @@ export async function scrapearGame(url) {
             texto: elemento.innerText, 
             plataforma: plataforma.innerText,
             precio: precio.innerHTML.trim(),
+            imagen:  imagen.src 
+
         
         
           };

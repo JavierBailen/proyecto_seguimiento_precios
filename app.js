@@ -21,11 +21,14 @@ function app(){
             texto = datos[0].texto
             precio = datos[0].precio
             plataforma = datos[0].plataforma
+            imagen = datos[0].imagen
+            
 
 
             $('#resultadoGame').append("<span> Nombre del producto: "+texto+"</span>" +"<br>");
-            $('#resultadoGame').append("<span> Precio: "+precio+"</span>" +"<br>");
+            $('#resultadoGame').append("<span> Precio: "+precio+"€</span>" +"<br>");
             $('#resultadoGame').append("<span> Plataforma: "+plataforma+"</span>" +"<br>");
+            $('#resultadoGame').append(`<img src='${imagen}'><br>`);
             $('#resultadoGame').append("<hr>")
         
 
@@ -36,10 +39,12 @@ function app(){
             .then(datos=>{
                 precio = datos[0].precio
                 texto = datos[0].texto
+                imagen = datos[0].imagen
 
                 
                 $('#resultadoInstantGaming').append("<span> Nombre del producto: "+texto+"</span>" +"<br>")
                 $('#resultadoInstantGaming').append("<span> Precio producto: "+precio+"</span>" +"<br>")
+                $('#resultadoInstantGaming').append(`<img width=200px height=200px src='${imagen}'><br>`);
                 $('#resultadoInstantGaming').append("<hr>")
                 
             })
