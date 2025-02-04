@@ -1,5 +1,17 @@
 import puppeteer  from "puppeteer";
-
+/**
+ * Hace un scraping a la pagina oficial de GAME para obtener informacion de algun producto
+ * 
+ * utilizaremos puppeter para abrir el navegador y acceder a la direccion proporcionada para extraer la informacion que queramos
+ * @async
+ * @param {string} url ->se refiere a la url de la pagina desde la que vamos a obtener la informacion
+ * @returns {Promise<Array<{texto:string, plataforma: string, precio: string, imagen: string}>>}
+ * Nos devuelve un array que contiene la iformación del producto tales como: 
+ * -texto: Nombre del producto
+ * -plataforma: Plataforma a la que pertenece el producto buscado
+ * -precio: Precio del producto buscado
+ * -imagen: Url de la imagen del producto
+ */
 export async function scrapearGame(url) {
 
   

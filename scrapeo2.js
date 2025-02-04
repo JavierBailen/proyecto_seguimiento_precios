@@ -1,4 +1,15 @@
 import puppeteer  from "puppeteer";
+/**
+ * Esta función asyncrona hace un scraping a la pagina de Instant Gaming para obtener informacion del producto que se buscó en el primer scraping
+ * La función abre el navegador usando Puppeter, realiza una busqueda en instant gaming y extrae la información relevante como el titulo, precio e imagen del producto
+ * @async
+ * @param {string} nombreProducto -Es el nombre del producto que se desea buscar que nos viene dado del primer scraping
+ * @returns {Promise<Array<{texto:string, precio: string, imagen: string}>>}
+ * Nos devuelve  un array de objetos que contiene la información de los productos:
+ * -texto: Nombre del producto
+ * -precio: Precio del producto
+ * -imagen: Url de la imagen del producto
+ */
 
 export async function scrapearInstantGaming(nombreProducto) {
   
